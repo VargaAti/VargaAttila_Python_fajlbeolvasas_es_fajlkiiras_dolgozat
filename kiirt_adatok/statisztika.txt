@@ -1,0 +1,7 @@
+Ez kerül a fájlba...
+1. A beolvasott fájlban összesen 30 versenyző szerepel.
+2. A legtöbb futamot nyert versenyző: Lewis Hamilton
+3. A legkevesebb futamot nyert versenyző: Riccardo Patrese
+4. A legtöbb futamot teljesített versenyző: Fernando Alonso
+5. Az átlagos futamszám: 187.97
+***A legtöbb futamgyőzelmet szerző csapat: ____

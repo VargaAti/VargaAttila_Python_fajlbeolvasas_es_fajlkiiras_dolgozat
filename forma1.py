@@ -25,7 +25,6 @@ with open('beolvasando_adatok/f1.txt', 'r', encoding='utf-8') as forrasfajl:
         futam = int(adatok[3])
         versenyzo = {'nev': nev, 'csapat': csapat, 'gyozelem': gyozelem, 'futam': futam}
         versenyzok.append(versenyzo)
-
 print(f'{versenyzok=}')
 
 #1. feladat
@@ -51,12 +50,12 @@ for i in versenyzok:
     futamok_listaja.append(i["futam"])
 legtobb_futam = versenyzok[futamok_listaja.index(max(futamok_listaja))]
 
-#6. feladat
 
-
-print(f"1. A beolvasott fájlban összesen {versenyzok_szama} versenyző szerepel.")
-print(f"2. A legtöbb futamot nyert versenyző: {legtobb_gyozelem["nev"]}")
-print(f"3. A legkevesebb futamot nyert versenyző: {legkevesebb_gyozelem["nev"]}")
-print(f"4. A legtöbb futamot teljesített versenyző: {legtobb_futam["nev"]}")
-print(f"5. Az átlagos futamszám: {round(st.mean(i["futam"] for i in versenyzok), 2)}")
-print(f"***A legtöbb futamgyőzelmet szerző csapat: ____")
+with open('./kiirt_adatok/statisztika.txt', 'w', encoding='utf-8') as celfajl:
+    print('Ez kerül a fájlba...', file=celfajl)
+    print(f"1. A beolvasott fájlban összesen {versenyzok_szama} versenyző szerepel.", file=celfajl)
+    print(f"2. A legtöbb futamot nyert versenyző: {legtobb_gyozelem["nev"]}", file=celfajl)
+    print(f"3. A legkevesebb futamot nyert versenyző: {legkevesebb_gyozelem["nev"]}", file=celfajl)
+    print(f"4. A legtöbb futamot teljesített versenyző: {legtobb_futam["nev"]}", file=celfajl)
+    print(f"5. Az átlagos futamszám: {round(st.mean(i["futam"] for i in versenyzok), 2)}", file=celfajl)
+    print(f"***A legtöbb futamgyőzelmet szerző csapat: ____", file=celfajl)
